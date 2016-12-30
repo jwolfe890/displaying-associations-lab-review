@@ -1,8 +1,11 @@
+require 'pry'
+
 class ArtistsController < ApplicationController
   def index
   end
 
   def show
+    @artist = Artist.find_by_id(params[:id])
   end
 
   def new
